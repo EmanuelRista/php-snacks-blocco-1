@@ -39,7 +39,24 @@ Olimpia Milano - Cantù | 55-60 -->
   for ($i = 0; $i < count($matches); $i++) {
     $keys = array_keys($matches);
     $current = $keys[$i];
-    echo "Partita : " . $matches[$current]["casa"] . " - " . $matches[$current]["ospite"] . " | " . $matches[$current]["punti_casa"] . " - " . $matches[$current]["punti_ospite"] . "<br>";
+    echo "Partita: " . $matches[$current]["casa"] . " - " . $matches[$current]["ospite"] . " | " . $matches[$current]["punti_casa"] . " - " . $matches[$current]["punti_ospite"] . "<br>";
+  }
+
+  /* PHP Snack 2:
+Passare come parametri GET name, mail e age everificare (cercando i metodi che non conosciamo nella documentazione) che:
+1. name sia più lungo di 3 caratteri,
+2. che mail contenga un punto e una chiocciola
+3. e che age sia un numero.
+Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato” */
+
+  $name = $_GET["name"];
+  $mail = $_GET["mail"];
+  $age = $_GET["age"];
+
+  if (strlen($name) > 3 &&  strpos($mail, '.') !== false && strpos($mail, '@') !== false && is_numeric($age)) { //SE la lunghezza di name è maggiore a tre E mail contiene . non è identico a falso E mail contiene @ non è identico a falso e age è un numero
+    echo "Accesso Riuscito"; //allora bene
+  } else { //diversamente
+    echo "Accesso Negato"; //vattene ******
   }
 
 
