@@ -39,7 +39,7 @@ Olimpia Milano - Cantù | 55-60 -->
   for ($i = 0; $i < count($matches); $i++) {
     $keys = array_keys($matches);
     $current = $keys[$i];
-    echo "Partita 1: " . $matches[$current]["casa"] . " - " . $matches[$current]["ospite"] . " | " . $matches[$current]["punti_casa"] . " - " . $matches[$current]["punti_ospite"] . "<br>";
+    echo "Partita : " . $matches[$current]["casa"] . " - " . $matches[$current]["ospite"] . " | " . $matches[$current]["punti_casa"] . " - " . $matches[$current]["punti_ospite"] . "<br>";
   }
 
 
